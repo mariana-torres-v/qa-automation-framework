@@ -7,6 +7,9 @@ class Config:
     # Tipo de ejecución
     EXECUTION_ENV = os.getenv("EXECUTION_ENV", "local").lower()
 
+    # Plataforma de automatización
+    PLATFORM = os.getenv("PLATFORM", "web").lower()
+
     # URL base del proyecto
     BASE_URL = os.getenv("BASE_URL", "https://www.google.com")
 

@@ -1,6 +1,6 @@
 from playwright.sync_api import sync_playwright
 from core.config import Config
-from core.logging.logger import FrameworkLogger
+from core.logger.logging import FrameworkLogger
 
 
 class BrowserManager:

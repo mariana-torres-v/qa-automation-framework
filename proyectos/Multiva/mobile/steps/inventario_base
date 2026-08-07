@@ -1,0 +1,58 @@
+COMUNES
+────────────────────────────────────
+el usuario abre la aplicación
+el usuario se encuentra en el landing page
+el usuario se encuentra en "{pantalla}"
+navega a "{opcion}"
+selecciona la opción "{opcion}"
+ingresa su contraseña
+confirma la operación
+el sistema muestra la pantalla "{pantalla}"
+el sistema regresa al landing page
+
+
+LOGIN
+────────────────────────────────────
+inicia sesión con una contraseña válida
+el usuario visualiza el landing page
+el sistema muestra el saludo del usuario
+
+
+DESTINATARIOS
+────────────────────────────────────
+captura los datos requeridos del destinatario "{tipo}"
+selecciona un destinatario "{tipo}"
+modifica los datos permitidos del destinatario
+continúa con el registro
+continúa con la modificación
+confirma el registro del destinatario
+confirma la eliminación
+acepta el resultado de la operación
+el destinatario "{tipo}" queda registrado
+los datos del destinatario se muestran actualizados
+el destinatario "{tipo}" ya no se muestra en la lista
+
+
+TRANSFERENCIAS
+────────────────────────────────────
+captura los datos requeridos de la transferencia
+continúa con la transferencia
+confirma la transferencia
+finaliza la transferencia
+
+
+MOVIMIENTOS
+────────────────────────────────────
+selecciona una cuenta
+consulta los movimientos de la cuenta
+selecciona el último movimiento
+el sistema muestra el comprobante del movimiento seleccionado
+
+
+ESTADO DE CUENTA
+────────────────────────────────────
+selecciona el año "{anio}"
+selecciona el mes "{mes}"
+solicita la descarga del estado de cuenta
+el sistema muestra el estado de cuenta solicitado
+el estado de cuenta se descarga correctamente

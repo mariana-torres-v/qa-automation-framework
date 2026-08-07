@@ -8,18 +8,16 @@ from selenium.common.exceptions import TimeoutException
 from core.logger.logging import FrameworkLogger
 
 
-
-
-
 class BasePageMobile:
 
     def __init__(self, driver: WebDriver):
         self.driver = driver
         self.wait = WebDriverWait(self.driver, 10)
-        self.logger = FrameworkLogger.get_logger()
+        self.log = FrameworkLogger.get_logger()
+
     def wait_for_element(self, locator) -> WebElement:
         """Espera hasta que el elemento sea visible."""
-        logger.info(f"Esperando elemento {locator}")
+        self.log.info(f"Esperando elemento {locator}")
 
         try:
             return self.wait.until(
@@ -27,7 +25,7 @@ class BasePageMobile:
             )
 
         except TimeoutException:
-            logger.error(
+            self.log.error(
                 f"Timeout esperando elemento visible | "
                 f"Locator: {locator} | "
                 f"Timeout: 10 segundos"
@@ -36,7 +34,7 @@ class BasePageMobile:
 
     def wait_for_clickable(self, locator) -> WebElement:
         """Espera hasta que el elemento pueda recibir un clic."""
-        logger.info(f"Esperando elemento {locator} para hacer clic")
+        self.log.info(f"Esperando elemento {locator} para hacer clic")
 
         try:
             return self.wait.until(
@@ -53,14 +51,14 @@ class BasePageMobile:
 
     def click(self, locator):
         """Espera el elemento y hace clic."""
-        logger.info(f"Clic en {locator}")
+        self.log.info(f"Clic en {locator}")
 
         element = self.wait_for_clickable(locator)
         element.click()
 
     def write(self, locator, text):
         """Espera el elemento y escribe texto."""
-        logger.info(f"Se escribe dentro de {locator}")
+        self.log.info(f"Se escribe dentro de {locator}")
 
         element = self.wait_for_element(locator)
         element.clear()
@@ -68,6 +66,6 @@ class BasePageMobile:
 
     def is_element_displayed(self, locator):
         """Valida que el elemento sea visible."""
-        logger.info(f"Esperando que se muestre el elemento {locator}")
+        self.log.info(f"Esperando que se muestre el elemento {locator}")
 
         return self.wait_for_element(locator).is_displayed()

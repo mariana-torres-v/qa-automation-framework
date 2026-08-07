@@ -1,8 +1,7 @@
-#from mobile.base_page import BasePageMobile
-#from proyectos.Multiva.mobile.locators.edit_destinatario_locators import EditDestinatarioLocators as locators
-#
-#
-#class EditDestinatarioPage(BasePageMobile):
+from core.mobile.base_page import BasePageMobile
+
+class EditDestinatarioPage(BasePageMobile):
+   pass
 #
 #    def edit_mtu(self, mtu):
 #        self.write(locators.input_mtu, mtu)

@@ -1,4 +1,4 @@
-from web.base_page import BasePage
+from core.web.base_page import BasePage
 from proyectos.bykon.locators.google_page_locators import GoogleLocators
 
 class GooglePage(BasePage):

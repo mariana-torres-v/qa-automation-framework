@@ -14,16 +14,14 @@ class EnvironmentManager:
     @staticmethod
     def before_all(context):
 
-        # WEB
-        if context.config.userdata.get("platform") == "web":
+        platform = context.config.userdata.get("platform")
 
+        if platform == "web":
             context.browser_manager = BrowserManager()
             context.page = context.browser_manager.start()
             context.pages = PageManager(context.page)
 
-        # MOBILE
-        elif context.config.userdata.get("platform") == "mobile":
-
+        elif platform == "mobile":
             context.appium_manager = AppiumDriver()
             context.driver = context.appium_manager.start()
             context.pages = MobilePageManager(context.driver)

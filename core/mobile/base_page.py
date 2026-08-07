@@ -7,6 +7,8 @@ from selenium.common.exceptions import TimeoutException
 
 from core.logger.logging import FrameworkLogger
 
+from appium.webdriver.common.appiumby import AppiumBy
+
 
 class BasePageMobile:
 
@@ -69,3 +71,20 @@ class BasePageMobile:
         self.log.info(f"Esperando que se muestre el elemento {locator}")
 
         return self.wait_for_element(locator).is_displayed()
+
+    def scroll_into_view(self, locator):
+        locator_type, locator_value = locator
+
+        if locator_type == AppiumBy.ACCESSIBILITY_ID:
+            self.driver.find_element(
+                AppiumBy.ANDROID_UIAUTOMATOR,
+                f'new UiScrollable(new UiSelector().scrollable(true))'
+                f'.scrollIntoView(new UiSelector().description("{locator_value}"));'
+            )
+        else:
+            raise ValueError(
+                f"Tipo de locator no soportado para scroll: {locator_type}"
+            )
+
+    def hide_keyboard(self):
+        self.driver.execute_script('mobile:pressKey', {"keycode": 4})

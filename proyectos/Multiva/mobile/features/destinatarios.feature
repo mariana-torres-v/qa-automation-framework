@@ -41,7 +41,7 @@ Feature: Administración de destinatarios
   @destinatarios @editar @multiva
   Scenario: Modificar un destinatario Multiva
     Given el usuario se encuentra en "Administrar destinatarios"
-    When selecciona un destinatario "Multiva"
+    When selecciona un destinatario "Multiva editar"
     And selecciona la opción "Editar"
     And modifica los datos permitidos del destinatario
     And continúa con la modificación
@@ -52,7 +52,7 @@ Feature: Administración de destinatarios
   @destinatarios @editar @otro_banco
   Scenario: Modificar un destinatario de otro banco
     Given el usuario se encuentra en "Administrar destinatarios"
-    When selecciona un destinatario "Otro banco"
+    When selecciona un destinatario "Otro banco editar"
     And selecciona la opción "Editar"
     And modifica los datos permitidos del destinatario
     And continúa con la modificación
@@ -67,7 +67,7 @@ Feature: Administración de destinatarios
   @destinatarios @eliminar @multiva
   Scenario: Eliminar un destinatario Multiva
     Given el usuario se encuentra en "Administrar destinatarios"
-    When selecciona un destinatario "Multiva"
+    When selecciona un destinatario "Multiva eliminar"
     And selecciona la opción "Eliminar"
     And confirma la eliminación
     And ingresa su contraseña
@@ -80,7 +80,7 @@ Feature: Administración de destinatarios
   @destinatarios @eliminar @otro_banco
   Scenario: Eliminar un destinatario de otro banco
     Given el usuario se encuentra en "Administrar destinatarios"
-    When selecciona un destinatario "Otro banco"
+    When selecciona un destinatario "Otro banco eliminar"
     And selecciona la opción "Eliminar"
     And confirma la eliminación
     And ingresa su contraseña

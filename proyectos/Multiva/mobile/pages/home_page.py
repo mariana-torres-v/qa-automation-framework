@@ -5,4 +5,58 @@ from proyectos.Multiva.mobile.locators.home_locators import HomeLocators as loca
 class HomePage(BasePageMobile):
 
     def is_displayed(self):
-        return self.is_element_displayed(locators.title_home)
+        return self.is_element_displayed(
+            locators.title_home
+        )
+
+    # ===========================
+    # Cuentas
+    # ===========================
+
+    def click_cuenta_basica(self):
+        self.click(
+            locators.cuenta_basica_gf
+        )
+
+    # ===========================
+    # Transferencias
+    # ===========================
+
+    def click_btn_transferir(self):
+        self.click(
+            locators.btn_transferir
+        )
+
+    def go_to_administrar_destinatarios(self):
+        self.click(
+            locators.btn_admin_destinatarios
+        )
+
+    def click_transferir_cuentas_propias(self):
+        self.click(
+            locators.btn_cuentas_propias
+        )
+
+    def click_transferir_terceros(self):
+        self.click(
+            locators.btn_terceros
+        )
+
+    # ===========================
+    # Logout
+    # ===========================
+
+    def click_btn_hamburguesa(self):
+        self.click(
+            locators.menu_hamburguesa
+        )
+
+    def click_opt_logout(self):
+        self.click(
+            locators.opt_logout
+        )
+
+    def click_btn_logout(self):
+        self.click(
+            locators.btn_logout
+        )

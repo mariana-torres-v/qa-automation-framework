@@ -4,41 +4,15 @@ class LoginLocators:
 
     btn_login_w_pass = (
         AppiumBy.ACCESSIBILITY_ID,
-        ""
+        "VV16|contents1:S000-flcLoginWithPass"
     )
 
     text_password = (
         AppiumBy.ACCESSIBILITY_ID,
-        ""
+        "VV16|contents1:S000-orgInputPass-iptPassMdl"
     )
 
-    btn_confirmar = (
+    btn_login = (
         AppiumBy.ACCESSIBILITY_ID,
-        ""
+        "VV16|contents1:S000-btnLogin"
     )
-
-"""
-    
-next_button = (
-    AppiumBy.ACCESSIBILITY_ID,
-    "VV15 | contents1:S001-btnNext"
-)
-
-next_button_2 = (
-    AppiumBy.ACCESSIBILITY_ID,
-    "VV15|contents1:S002-btnNext"
-)
-
-next_button_3 = (
-    AppiumBy.ACCESSIBILITY_ID,
-    "VV15|contents1:S003-btnNext"
-)
-
-continue_button = (
-    AppiumBy.ACCESSIBILITY_ID,
-    "VV15|contents1:S007-btnLogin"
-)
-
-VV15|contents1:S007-btnLogin
-
-"""

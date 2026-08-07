@@ -14,7 +14,7 @@ class LoginPage(BasePageMobile):
 
 
     def click_login(self):
-        self.click(locators.btn_confirmar)
+        self.click(locators.btn_login)
 
 
 

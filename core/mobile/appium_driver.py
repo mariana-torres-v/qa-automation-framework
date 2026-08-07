@@ -17,11 +17,31 @@ class AppiumDriver:
         options.platform_name = Config.PLATFORM_NAME
         options.automation_name = Config.AUTOMATION_NAME
         options.device_name = Config.DEVICE_NAME
-        options.app_package = Config.APP_PACKAGE
-        options.app_activity = Config.APP_ACTIVITY
 
-        options.no_reset = Config.NO_RESET
-        options.force_app_launch = Config.FORCE_APP_LAUNCH
+        options.set_capability(
+            "appium:appPackage",
+            Config.APP_PACKAGE
+        )
+
+        options.set_capability(
+            "appium:appActivity",
+            Config.APP_ACTIVITY
+        )
+
+        options.set_capability(
+            "appium:noReset",
+            True
+        )
+
+        options.set_capability(
+            "appium:forceAppLaunch",
+            True
+        )
+
+        options.set_capability(
+            "appium:autoLaunch",
+            True
+        )
 
         self.logger.info("Iniciando sesión Appium")
 
@@ -30,8 +50,9 @@ class AppiumDriver:
             options=options
         )
 
+        self.logger.info("Sesión Appium iniciada correctamente")
         self.logger.info(
-            "Sesión Appium iniciada correctamente"
+            f"App activa: {self.driver.current_package}"
         )
 
         self.driver.implicitly_wait(10)

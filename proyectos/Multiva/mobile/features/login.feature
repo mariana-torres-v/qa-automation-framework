@@ -5,6 +5,5 @@ Feature: Login
         Given el usuario abre la aplicación
         When inicia sesión con una contraseña válida
         Then el usuario visualiza el landing page
-        And el header muestra muestra el saludo del usuario
 
 

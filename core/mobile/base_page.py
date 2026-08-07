@@ -42,7 +42,7 @@ class BasePageMobile:
             )
 
         except TimeoutException:
-            logger.error(
+            self.log.error(
                 f"Timeout esperando elemento clickeable | "
                 f"Locator: {locator} | "
                 f"Timeout: 10 segundos"

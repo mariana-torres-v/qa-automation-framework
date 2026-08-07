@@ -54,7 +54,7 @@ class Config:
 
     APP_ACTIVITY = os.getenv(
         "APP_ACTIVITY",
-        "net.veritran.mvmx.p3.qa.VTCommonActivity"
+        ".VTCommonActivity"
     )
 
     NO_RESET = os.getenv(

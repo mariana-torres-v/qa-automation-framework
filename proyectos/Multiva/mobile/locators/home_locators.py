@@ -3,9 +3,10 @@ from appium.webdriver.common.appiumby import AppiumBy
 class HomeLocators:
 
     title_home = (
-        AppiumBy.ACCESSIBILITY_ID,
-        "..."
+        AppiumBy.ANDROID_UIAUTOMATOR,
+        'new UiSelector().text("Hola, Nombre!")'
     )
+
 
     cuenta_basica_gf = (
         AppiumBy.ACCESSIBILITY_ID,

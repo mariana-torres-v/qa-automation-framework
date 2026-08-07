@@ -1,0 +1,11 @@
+Base page y su existencia
+
+todas las páginas tienen su propio
+Home page, login page, dashboard page, payments page, transfer page
+
+Y todas tendrían
+abrir url, obtener titulo, esperar a que cargue la pagina, hacer capturas, buscar elementos
+
+los que se repetirían dentro de cada uno,
+por lo que en una sola clase BasePage se pueden poner
+y se heredan

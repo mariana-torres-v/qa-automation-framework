@@ -1,24 +1,37 @@
 from core.browser import BrowserManager
+from core.mobile.appium_driver import AppiumDriver
+
 from proyectos.bykon.page_manager import PageManager
+from proyectos.Multiva.mobile.page_manager import MobilePageManager
+
 
 class EnvironmentManager:
     """
-    Responsabale de administrar el ciclo de vida del navegador.
+    Responsable de administrar el ciclo de vida
+    de las ejecuciones web y mobile.
     """
 
     @staticmethod
     def before_all(context):
 
-        context.browser_manager = BrowserManager()
-        context.page = context.browser_manager.start()
-        context.pages = PageManager(context.page)
+        # WEB
+        if context.config.userdata.get("platform") == "web":
 
-        """
-        Behave tiene tres objetos disponibles 
-        context.browser_manager
-        context.page
-        context.pages
-        """
+            context.browser_manager = BrowserManager()
+            context.page = context.browser_manager.start()
+            context.pages = PageManager(context.page)
+
+        # MOBILE
+        elif context.config.userdata.get("platform") == "mobile":
+
+            context.appium_manager = AppiumDriver()
+            context.driver = context.appium_manager.start()
+            context.pages = MobilePageManager(context.driver)
+
+        else:
+            raise ValueError(
+                "Debe indicarse platform=web o platform=mobile"
+            )
 
     @staticmethod
     def after_all(context):
@@ -26,4 +39,5 @@ class EnvironmentManager:
         if hasattr(context, "browser_manager"):
             context.browser_manager.stop()
 
-
+        if hasattr(context, "appium_manager"):
+            context.appium_manager.stop()

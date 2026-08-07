@@ -4,6 +4,7 @@ from appium.options.android import UiAutomator2Options
 from core.config import Config
 from core.logger.logging import FrameworkLogger
 
+
 class AppiumDriver:
 
     def __init__(self):
@@ -29,7 +30,9 @@ class AppiumDriver:
             options=options
         )
 
-        self.logger.info("Sesión Appium iniciada correctamente")
+        self.logger.info(
+            "Sesión Appium iniciada correctamente"
+        )
 
         self.driver.implicitly_wait(10)
 
@@ -39,9 +42,4 @@ class AppiumDriver:
 
         if self.driver:
             self.logger.info("Cerrando sesión Appium")
-
-            #if Config.CLOSE_APP_ON_EXIT:
-             #   self.driver.terminate_app(Config.APP_PACKAGE)
-            #self.logger.info("Se ha cerrado la app")
-
             self.driver.quit()

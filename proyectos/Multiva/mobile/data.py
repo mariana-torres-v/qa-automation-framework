@@ -2,54 +2,34 @@
 
 password = 'TesterBk2026*'
 
-destinatarios = {
+forever_spei_alias = 'autodom11'
 
-    "Multiva": {
-        "tipo": "Multiva",
-        "numero_producto": "",
-        "nombre": "",
-        "monto_maximo": "",
-        "alias": "",
-        "rfc": "",
-        "correo": ""
-    },
+destino_multiva = None
+destino_spei = None
 
-    "Otro banco": {
-        "tipo": "Otro banco",
-        "clabe": "",
-        "nombre": "",
-        "monto_maximo": "",
-        "alias": "",
-        "rfc": "",
-        "correo": ""
-    },
+mtu = 2500
 
-    "Multiva editar": {
-        "tipo": "Multiva",
-        "nombre": "a la grande le puse kuka",
-        "alias": "Editar Multiva",
-        "correo": "editar_multiva@test.com"
-    },
+multiva_transfer_amount = 231.00
+multiva_transfer_description = "Auto descripcion multiva"
 
-    "Multiva eliminar": {
-        "tipo": "Multiva",
-        "nombre": "multiva eliminar",
-        "alias": "Eliminar Multiva",
-        "correo": "eliminar_multiva@test.com"
-    },
+spei_transfer_amount = 123.00
+spei_transfer_description = "Auto descripcion spei"
 
-    "Otro banco editar": {
-        "tipo": "Otro banco",
-        "nombre": "autodom5",
-        "alias": "Editar Otro Banco",
-        "correo": "editar_otro@test.com"
-    },
+cuentas_propias_amount = 222.00
+cuentas_propias_transfer_description = "Auto cuenta propia"
 
-    "Otro banco eliminar": {
-        "tipo": "Otro banco",
-        "nombre": "autodom2",
-        "alias": "Eliminar Otro Banco",
-        "correo": "eliminar_otro@test.com"
-    }
+multiva_nombre = "Nombre Destinatario Multiva"
+multiva_product_number = '649287'
+multiva_alias = "Alias Multiva"
+multiva_modified_alias = "Alias Modificado Multiva"
 
-}
+spei_nombre = "Nombre Destinatario Spei"
+spei_product_number = '002180702389325114'
+spei_alias = "Alias Spei"
+rfc = "TOVM001020A34"
+email = 'email_auto2@multiva.com.mx'
+spei_modified_alias = "Alias Modificado Spei"
+
+modal_30_min_text = ("Por tu seguridad deberán transcurrir 30 minutos "
+                     "antes de transferir o pagar a esta cuenta destino.")
+

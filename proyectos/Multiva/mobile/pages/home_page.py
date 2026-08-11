@@ -13,13 +13,13 @@ class HomePage(BasePageMobile):
     # Cuentas
     # ===========================
 
-    def click_cuenta_basica(self):
+    def go_to_account_details_page(self):
         self.click(
             locators.cuenta_basica_gf
         )
 
     # ===========================
-    # Transferencias
+    # SNACK BAR -- $ TRANSFERIR $
     # ===========================
 
     def click_btn_transferir(self):
@@ -60,3 +60,9 @@ class HomePage(BasePageMobile):
         self.click(
             locators.btn_logout
         )
+
+    def logout(self):
+        self.click_btn_hamburguesa()
+        self.click_opt_logout()
+        self.click_btn_logout()
+

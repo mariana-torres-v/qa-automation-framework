@@ -7,7 +7,6 @@ class HomeLocators:
         'new UiSelector().text("Hola, Nombre!")'
     )
 
-
     cuenta_basica_gf = (
         AppiumBy.ACCESSIBILITY_ID,
         "VV00|contents1:S002-dtgRowProd0-0-flcCardProduct0"
@@ -36,7 +35,7 @@ class HomeLocators:
     )
 
     btn_terceros = (
-        AppiumBy.ACCESSIBILITY_ID,
+        AppiumBy.ANDROID_UIAUTOMATOR,
         'new UiSelector().description('
         '"VV00|contents1:S002-idrMenuTrransfer-rptItem"'
         ').instance(1)'
@@ -50,16 +49,16 @@ class HomeLocators:
     )
 
     menu_hamburguesa = (
-        AppiumBy.ANDROID_UIAUTOMATOR,
-        ''
+        AppiumBy.ACCESSIBILITY_ID,
+        'VV00|contents1:S002-flcIcMenu'
     )
 
     opt_logout = (
-        AppiumBy.ANDROID_UIAUTOMATOR,
-        ''
+        AppiumBy.ACCESSIBILITY_ID,
+        'VV00|contents1:S002-txtLogOut'
     )
 
     btn_logout = (
-        AppiumBy.ANDROID_UIAUTOMATOR,
-        ''
+        AppiumBy.ACCESSIBILITY_ID,
+        'VV00|contents1:S910-btnActionPopup'
     )

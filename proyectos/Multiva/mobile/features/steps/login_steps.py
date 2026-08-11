@@ -1,9 +1,9 @@
-from behave import when, then
+from behave import when
 
 from proyectos.Multiva.mobile import data
 
 
-@when('inicia sesión con una contraseña válida')
+@when('inicia sesion con una contraseña valida')
 def step_login_password_valida(context):
     password = data.password
 

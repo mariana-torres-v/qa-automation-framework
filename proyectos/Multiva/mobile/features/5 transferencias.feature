@@ -11,15 +11,17 @@ Feature: Transferencias
     When inicia sesion con una contraseña valida
     Then el sistema muestra el landing page
 
-    When el usuario navega a transferir a cuentas propias
+    When el usuario navega a "Transferir cuentas propias"
     And el usuario captura los datos requeridos de la transferencia "Cuentas propias"
-    And el usuario continúa con la transferencia
-    And el usuario confirma la transferencia
+    And el usuario continúa con la transferencia "Cuentas propias"
+    And el usuario confirma la transferencia "Cuentas propias"
     And el usuario autoriza la transferencia
     And confirma la operación
 
-    Then el usuario ve el comprobante de la transferencia
-    And finaliza la transferencia
+    Then el usuario ve el comprobante de la transferencia "Cuentas propias"
+    And el usuario cierra el pop up "Rate your experience"
+    And el usuario finaliza la transferencia "Cuentas propias"
+
 
   # ============================================================
   # TERCEROS MULTIVA
@@ -32,15 +34,16 @@ Feature: Transferencias
     When inicia sesion con una contraseña valida
     Then el sistema muestra el landing page
 
-    When el usuario navega a transferir a terceros
+    When el usuario navega a "Transferir terceros"
     And el usuario captura los datos requeridos de la transferencia "Terceros Multiva"
-    And el usuario continúa con la transferencia
-    And el usuario confirma la transferencia
+    And el usuario continúa con la transferencia "Terceros Multiva"
+    And el usuario confirma la transferencia "Terceros Multiva"
     And el usuario autoriza la transferencia
     And confirma la operación
 
     Then el usuario ve el comprobante de la transferencia
-    And finaliza la transferencia
+    And el usuario cierra el pop up "Rate your experience"
+    And el usuario finaliza la transferencia
 
 
 
@@ -57,11 +60,11 @@ Feature: Transferencias
 
     When el usuario navega a transferir a terceros
     And el usuario captura los datos requeridos de la transferencia "SPEI"
-    And el usuario continúa con la transferencia
-    And el usuario confirma la transferencia
+    And el usuario continúa con la transferencia "SPEI"
+    And el usuario confirma la transferencia "SPEI"
     And el usuario autoriza la transferencia
     And confirma la operación
 
     Then el usuario ve el comprobante de la transferencia
-    And finaliza la transferencia
+    And el usuario finaliza la transferencia
 

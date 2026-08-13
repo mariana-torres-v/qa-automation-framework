@@ -5,8 +5,7 @@ Feature: Consulta de estado de cuenta
     When inicia sesion con una contraseña valida
     Then el sistema muestra el landing page
 
-    When selecciona una cuenta
-    And navega a "Estados de cuenta"
+    When el usuario navega a "Estado de cuenta"
     And selecciona el año "2026"
     And selecciona el mes "Julio"
     And ingresa su contraseña

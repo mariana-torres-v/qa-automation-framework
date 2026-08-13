@@ -1,6 +1,6 @@
 Feature: Login
 
-    @login @smoke
+    @login
     Scenario: Iniciar sesión correctamente
 
         Given el usuario abre la aplicación

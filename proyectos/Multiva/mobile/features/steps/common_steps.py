@@ -65,6 +65,10 @@ def step_navegar_a(context, option):
     elif option == "Movimientos":
         context.pages.home.go_to_account_details_page()
 
+    elif option == "Estado de cuenta":
+        context.pages.home.go_to_account_details_page()
+        context.pages.account_details.open_account_statements_page()
+
 
 
 
@@ -81,6 +85,15 @@ def step_ingresar_password(context, screen):
 
     elif screen == "Autorizar operacion":
         return context.pages.destinatarios.is_header_autorizar_operacion_displayed()
+
+
+@then('el usuario cierra el pop up "{tipo}"')
+def step_cerrar_popup(context, tipo):
+    if tipo == "Rate your experience":
+        context.pages.popups.close_rate_experience_if_displayed()
+
+    else:
+        pass
 
 
 @when('confirma la operación')

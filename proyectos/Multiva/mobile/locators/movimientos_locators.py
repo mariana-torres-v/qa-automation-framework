@@ -2,23 +2,15 @@ from appium.webdriver.common.appiumby import AppiumBy
 
 class MovementsLocators:
 
-    last_movement_amount = (
-        AppiumBy.ANDROID_UIAUTOMATOR,
-        ""
-    )
 
     header_comprobante = (
         AppiumBy.ANDROID_UIAUTOMATOR,
-        ''
+        'new UiSelector().description("VV00|contents1:S002-null-orgVoucher-flxHeaderSucess")'
     )
 
-    description = (
+    @staticmethod
+    def get_description_comprobante(text):
+        return (
         AppiumBy.ANDROID_UIAUTOMATOR,
-        ''
+        f'new UiSelector().textContains("{text}")'
     )
-
-    btn_estado_de_cuenta = (
-        AppiumBy.ACCESSIBILITY_ID,
-        ""
-    )
-

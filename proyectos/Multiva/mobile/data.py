@@ -1,21 +1,22 @@
 
+mes = "Julio"
+
 
 password = 'TesterBk2026*'
 
 forever_spei_alias = 'autodom11'
+forever_multiva_alias = "a la grande le puse kuka"
+propia_alias = "Multiva"
 
-destino_multiva = None
-destino_spei = None
+mtu = 25000
 
-mtu = 2500
-
-multiva_transfer_amount = 231.00
+multiva_transfer_amount = "23.10"
 multiva_transfer_description = "Auto descripcion multiva"
 
-spei_transfer_amount = 123.00
+spei_transfer_amount = "12.30"
 spei_transfer_description = "Auto descripcion spei"
 
-cuentas_propias_amount = 222.00
+cuentas_propias_amount = "22.20"
 cuentas_propias_transfer_description = "Auto cuenta propia"
 
 multiva_nombre = "Nombre Destinatario Multiva"
@@ -25,7 +26,10 @@ multiva_modified_alias = "Alias Modificado Multiva"
 
 spei_nombre = "Nombre Destinatario Spei"
 spei_product_number = '002180702389325114'
-spei_alias = "Alias Spei"
+
+#spei_alias = "Alias Spei"
+spei_alias = "JOEL JIMENEZ"
+
 rfc = "TOVM001020A34"
 email = 'email_auto2@multiva.com.mx'
 spei_modified_alias = "Alias Modificado Spei"

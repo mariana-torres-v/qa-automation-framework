@@ -11,25 +11,27 @@ def step_seleccionar_cuenta(context):
 def step_seleccionar_ultimo_movimiento(context, tipo):
 
     if tipo == 'Terceros Multiva':
-        amount = data.multiva_transfer_description
+        amount = data.multiva_transfer_amount
 
     elif tipo == 'SPEI':
-        amount = data.spei_transfer_description
+        amount = data.spei_transfer_amount
 
     elif tipo == 'Cuentas propias':
-        amount = data.cuentas_propias_transfer_description
+        amount = data.cuentas_propias_amount
 
     else:
         raise ValueError(
             f"Tipo de destinatario no soportado: {tipo}"
         )
 
-    context.pages.movements.click_on_last_movement(amount)
+    context.pages.account_details.click_on_last_movement_by_type(amount)
 
 
 @then('el sistema muestra el comprobante del movimiento seleccionado')
 def step_validar_comprobante_movimiento(context):
-    context.pages.movements.is_comprobante_displayed()
+    assert context.pages.movements.is_comprobante_displayed(), (
+        "No se muestra el comprobante del movimiento seleccionado"
+    )
 
 
 @then('el usuario valida que el comprobante de la transferencia "{tipo}" es correcto')
@@ -49,9 +51,6 @@ def step_validar_el_comprobante_de_movimiento(context, tipo):
             f"Tipo de destinatario no soportado: {tipo}"
         )
 
-    actual_description = context.pages.movements.get_transfer_description()
-    assert description in actual_description, (
-        f"El concepto de la transferencia es incorrecto. "
-        f"Esperado que contenga: '{description}' | "
-        f"Obtenido: '{actual_description}'"
+    assert context.pages.movements.is_description_displayed(description), (
+        f"No se muestra el comprobante con la descripción esperada: '{description}'"
     )

@@ -67,7 +67,7 @@ class BasePageMobile:
         element.clear()
         element.send_keys(text)
 
-    def is_element_displayed(self, locator, timeout=2):
+    def is_element_displayed(self, locator, timeout=10):
         """Valida si el elemento es visible."""
 
         self.log.info(f"Validando si se muestra el elemento {locator}")
